@@ -1,0 +1,19 @@
+button{
+    color: white
+}
+ #salvar{
+    background-color: blue;
+ }
+
+ #excluir{
+    background-color: red;
+ }
+
+ #cancelar{
+    background-color: silver;
+ }
+
+ .nav{
+    background-color: brown;
+    text-align: center;
+ }
