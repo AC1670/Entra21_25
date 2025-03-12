@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animationcode</title>
+    <style>
+        .centro {
+            align-items: center;
+            align-content: center;
+            justify-content: center;
+        }
+
+        div {
+            width: 200px;
+            height: 150px;
+            background-color: red;
+            transition: width 1s;
+            animation-name: example;
+            animation-duration: 4s;
+            animation-iteration-count: infinite;
+        }
+
+        div:hover {
+            width: 400px;
+        }
+
+        button {
+            border-radius: 5px;
+            transition: width 1s;
+            animation-name: otherexample;
+            animation-duration: 4s;
+            animation-iteration-count: infinite;
+        }
+
+        button:hover {
+            width: 0px;
+        }
+
+        @keyframes example {
+            from {
+                background-color: red;
+            }
+
+            to {
+                background-color: yellow;
+            }
+        }
+
+        @keyframes otherexample {
+            from {
+                background-color: blue;
+            }
+
+            to {
+                background-color: green
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>CSS Animation</h1>
+
+
+    <div class="centro"></div>
+    <h2></h2>
+    <button>Salvar</button>
+    <p><b>Note:</b> When an animation is finished, it goes back to its original style.</p>
+
+    </head>
+
+    <body>
+
+    </body>
+
+</html>
