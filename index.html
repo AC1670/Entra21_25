@@ -1,45 +1,45 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        h1{
-            background-color: blue;
-            color: white;
-            text-align: center;
-            padding-top: 10px;
-            padding-bottom: 15px;
-        }
-        p {
-          background-color: blueviolet; 
-          color: aliceblue; 
-          padding: 10px;
-        }
-
-        #meuparagrafo{
-            background-color: red;
-            color: chartreuse;
-        }
-
-        .conteudo{
-            background-color: aqua;
-            color: brown;
-        }
-    </style>
+    <title>javascript</title>
+    <!--No Head utiliza-se linguagem CSS-->
+   
+    <style></style>
 </head>
+
+<!--No Body utiliza-se a linguagem HTML-->
 <body>
-    <h1>Exemplo de css incorporado</h1>
-    <hr/>
-       <a href="cssexterno.html">CSS externo</a>
-       <a href="cadastro.html">Cadastro</a>
-    <hr/>
-    <p>Meu paragrafo</p>
-    <p>Outro paragrafo</p>
+    <label>Informe seu nome</label>
+    <Input type="text" placeholder="Ex.: Maria" id="nome"/>
+    <button onclick="greeting()"> Cumprimentar </button>
+    <p></p>
 
-    <p id="meuparagrafo">Outro paragrafo</p>
+    <hr>
 
-    <p class="conteudo">Mais um paragrafo</p>
+    <button onclick="Olá()">Clique Aqui</button>
+
+    <script>
+        function greeting(){
+            var nomeDigitado = document.getElementById('nome')
+            if(nomeDigitado.value === ''){
+            alert("O nome precisa ser digitado")
+            nomeDigitado.focus()
+            return
+            }
+
+        var paragrafo = document.getElementsByTagName('p')
+        paragrafo[0].innerHTML = 'Olá, ' + nomeDigitado.value
+        nomeDigitado.value = ''
+        }
+
+        function Olá() {
+            var nome = 'Maria'
+            alert(nome)
+        }
+    </script>
 </body>
+
 </html>
