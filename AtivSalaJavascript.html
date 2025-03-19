@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AtividadeSala19.03</title>
+</head>
+
+<body>
+    <h1>Pesquisa</h1>
+    <label>Informe seu Nome</label>
+    <Input type="text" placeholder="Ex.: Maria" id="nome" />
+
+    <p></p>
+
+    <label>Informe sua Idade</label>
+    <Input type="number" placeholder="Ex.: 16" id="idade" />
+    <button onclick="greeting()">Enter </button>
+    <hr>
+    <p></p>
+
+    <script>
+        function greeting() {
+            var nomeDigitado = document.getElementById('nome')
+            var idadeDigitado = document.getElementById('idade')
+            if (nomeDigitado.value === '') {
+                alert('O Nome Precisa ser Digitado')
+                nomeDigitado.focus()
+            }
+            if (idadeDigitado.value == ''){
+                alert('Cabeçudo, preste atenção e coloque a zorra da sua idade')
+                idadeDigitado.focus()
+            }
+            var paragrafo = document.getElementsByTagName('p')
+        paragrafo[1].innerHTML = 'Olá, ' + nomeDigitado.value + '. Você tem '+ idadeDigitado.value + ' anos'
+        nomeDigitado.value = ''
+
+        }
+    </script>
+</body>
+
+</html>
