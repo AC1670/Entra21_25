@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DocumentIMC</title>
+
+    <h1>Cálculo IMC</h1>
+
+    <label>Informe seu Nome</label>
+    <Input type="text" placeholder="Ex.: Maria" id="nome" />
+    <p></p>
+
+    <label>Informe sua Altura (cm)</label>
+    <input type="number" placeholder="Ex.:150" id="altura" />
+    <p></p>
+
+    <label>Informe seu Peso (kg)</label>
+    <input type="number" placeholder="Ex.:50" id="peso" />
+    <p></p>
+
+    <button onclick="greeting()">Enter </button>
+    <hr>
+
+</head>
+
+<body>
+    <script>
+        function greeting() {
+
+            var nomeDigitado = document.getElementById('nome')
+            var alturaDigitada = document.getElementById('altura')
+            var pesoDigitado = document.getElementById('peso')
+            
+        
+            if (nomeDigitado.value === '') {
+                alert('O Nome Precisa ser Digitado')
+                nomeDigitado.focus()
+            }
+            if (alturaDigitada.value === '') {
+                alert('A Altura Precisa ser Digitada')
+                alturaDigitada.focus()
+            }
+            if (pesoDigitado.value == '') {
+                alert('O Peso Precisa ser Digitado')
+                pesoDigitado.focus()
+            }
+
+            var paragrafo = document.getElementsByTagName('p')
+            paragrafo[1].innerHTML = 'Olá, ' + nomeDigitado.value +
+        }
+    </script>
+</body>
+
+</html>

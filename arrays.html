@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=>, initial-scale=1.0">
+    <title>Arrays</title>
+</head>
+
+<body onload="listar()">
+    <h2>Arrays</h2>
+    <label>Informe veículo que deseja adicionar</label>
+    <input type="text" placeholder="EX.: Corsa" id='carro'>
+    <button onclick="add()">Inserir</button>
+
+    <input type="checkbox" checked id="onde" />
+    <label>Inserir no Início?</label>
+
+    <hr />
+    <p> Carros: <span id="garagem"></span></p>
+<ul>
+
+</ul>
+    <script>
+        const cars = ['Opala', 'Fusca', 'TL']
+        cars.push('Kombi')
+        cars.unshift('Motoca')
+
+        document.getElementById('garagem').innerHTML = cars.toString()
+
+        function listar() {
+            itemLista = ''
+            for (let index = 0; index <cars.length; index++) {
+                itemLista += '<li>' + cars[index] + '</li>'
+            }
+
+            document.getElementsByTagName('ul')[0].innerHTML = itemLista
+
+        }
+
+
+        function add() {
+            var carro = document.getElementById('carro')
+    if(document.getElementById('onde').checked){
+        cars.unshift(carro.value)
+    }
+    else{
+            cars.push(carro.value)
+    }
+            listar()
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript</title>
+    <!--No Head utiliza-se linguagem CSS-->
+   
+    <style></style>
+</head>
+
+<!--No Body utiliza-se a linguagem HTML-->
+<body>
+    <label>Informe seu nome</label>
+    <Input type="text" placeholder="Ex.: Maria" id="nome"/>
+    <button onclick="greeting()"> Cumprimentar </button>
+    <p></p>
+
+    <hr>
+
+    <button onclick="Olá()">Clique Aqui</button>
+
+    <script>
+        function greeting(){
+            var nomeDigitado = document.getElementById('nome')
+            if(nomeDigitado.value === ''){
+            alert("O nome precisa ser digitado")
+            nomeDigitado.focus()
+            return
+            }
+
+        var paragrafo = document.getElementsByTagName('p')
+        paragrafo[0].innerHTML = 'Olá, ' + nomeDigitado.value
+        nomeDigitado.value = ''
+        }
+
+        function Olá() {
+            var nome = 'Maria'
+            alert(nome)
+        }
+    </script>
+</body>
+
+</html>
