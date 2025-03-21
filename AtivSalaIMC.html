@@ -4,12 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DocumentIMC</title>
+    <title>V2_AtividadeSala20.03</title>
 
+</head>
+
+<body>
     <h1>Cálculo IMC</h1>
 
     <label>Informe seu Nome</label>
-    <Input type="text" placeholder="Ex.: Maria" id="nome" />
+    <Input type="text" placeholder="Ex.: José" id="nome" />
     <p></p>
 
     <label>Informe sua Altura (cm)</label>
@@ -18,38 +21,37 @@
 
     <label>Informe seu Peso (kg)</label>
     <input type="number" placeholder="Ex.:50" id="peso" />
-    <p></p>
 
     <button onclick="greeting()">Enter </button>
     <hr>
 
-</head>
+    <p></p>
 
-<body>
     <script>
         function greeting() {
 
             var nomeDigitado = document.getElementById('nome')
-            var alturaDigitada = document.getElementById('altura')
+            var alturaDigitado = document.getElementById('altura')
             var pesoDigitado = document.getElementById('peso')
-            
-        
+
             if (nomeDigitado.value === '') {
                 alert('O Nome Precisa ser Digitado')
                 nomeDigitado.focus()
             }
-            if (alturaDigitada.value === '') {
+            if (alturaDigitado.value === '') {
                 alert('A Altura Precisa ser Digitada')
-                alturaDigitada.focus()
+                alturaDigitado.focus()
             }
-            if (pesoDigitado.value == '') {
+            if (pesoDigitado.value === '') {
                 alert('O Peso Precisa ser Digitado')
                 pesoDigitado.focus()
             }
-
             var paragrafo = document.getElementsByTagName('p')
-            paragrafo[1].innerHTML = 'Olá, ' + nomeDigitado.value +
+            paragrafo[2].innerHTML = 'Olá  ' + nomeDigitado.value + ', click ao lado para saber seu IMC.'
+        
         }
+
+      
     </script>
 </body>
 
