@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>V2_AtividadeSala20.03</title>
+    <title>V3_AtividadeSala20.03</title>
 
 </head>
 
@@ -24,34 +24,62 @@
 
     <button onclick="greeting()">Enter </button>
     <hr>
-
+    <p></p>
     <p></p>
 
     <script>
         function greeting() {
 
             var nomeDigitado = document.getElementById('nome')
-            var alturaDigitado = document.getElementById('altura')
-            var pesoDigitado = document.getElementById('peso')
+            var alturaDigitado = parseFloat(document.getElementById('altura').value)
+            var pesoDigitado = parseFloat(document.getElementById('peso').value)
+            var calculoDigitado = alturaDigitado / 100
+            var imcDigitado = pesoDigitado / (calculoDigitado * calculoDigitado)
+            var indiceDigitado = ''
 
             if (nomeDigitado.value === '') {
                 alert('O Nome Precisa ser Digitado')
                 nomeDigitado.focus()
+                return
             }
+
             if (alturaDigitado.value === '') {
                 alert('A Altura Precisa ser Digitada')
                 alturaDigitado.focus()
+                return
             }
+
             if (pesoDigitado.value === '') {
                 alert('O Peso Precisa ser Digitado')
                 pesoDigitado.focus()
+                return
+            }
+
+            if (imcDigitado < 18.5) {
+                indiceDigitado = "Você está Magro pra zorra"
+            }
+            else if (imcDigitado < 24.9) {
+                indiceDigitado = "Você está de boa"
+            }
+            else if (imcDigitado < 29.9) {
+                indiceDigitado = "Fica ligado no peso"
+            }
+            else if (imcDigitado < 34.9) {
+                indiceDigitado = "A coisa tá ficando feia"
+            }
+            else if (imcDigitado < 39.9) {
+                indiceDigitado = "Complicou pra seu lado"
+            }
+            else {
+                indiceDigitado = "Tá lascado"
             }
             var paragrafo = document.getElementsByTagName('p')
-            paragrafo[2].innerHTML = 'Olá  ' + nomeDigitado.value + ', click ao lado para saber seu IMC.'
-        
+            paragrafo[2].innerHTML = 'Olá  ' + nomeDigitado.value + ', o seu IMC tem valor de ' + imcDigitado + ' kg/m².'
+            paragrafo[3].innerHTML = indiceDigitado
         }
+    
 
-      
+
     </script>
 </body>
 
