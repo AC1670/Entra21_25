@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var objeto = { nome: 'maria', email: 'maria@gmail.com', fone: '(47) 9999-6606' }
+        console.log(objeto)
+        console.log(objeto.nome)
+
+        const objetoJson = JSON.stringify(objeto)
+        console.log(objetoJson)
+        console.log(objetoJson.nome)
+
+        const meuJson = '{"marcas":"Toyota", "modelo": "Ethios", "cor": "vermelho"}'
+        console.log(meuJson)
+        console.log(meuJson.marca)
+
+        const meuObjeto = JSON.parse(meuJson)
+        console.log(meuObjeto)
+        console.log(meuObjeto.marca)
+        console.log(meuObjeto.modelo)
+    </script>
+</body>
+
+</html>

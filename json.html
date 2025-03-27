@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p></p>
+    <table>
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>idade</th>
+                <th>Email</th>
+                <th>Fone</th>
+            </tr>
+        </thead>
+        <tbody id="dados">
+            <!--Inserir via Javascript-->
+        </tbody>
+
+    </table>
+    <hr />
+    <button onclick="ListarEmTabela()">Carregar</button>
+
+    <script>
+        /* var contato = { nome: 'Ana', idade: 18, email: 'ana@gmail.com', fone: '(47)9090-6070' }
+ 
+         document.getElementsByTagName('p')[0].innerHTML = contato.email */
+
+        var listaContatos = [
+            { nome: 'Ana', idade: 18, email: 'ana@gmail.com', fone: '(47)9090-6070' },
+            { nome: 'Maria', idade: 18, email: 'maria@gmail.com', fone: '(47)9090-6070' },
+            { nome: 'João', idade: 18, email: 'joao@gmail.com', fone: '(47)9090-6070' },
+            { nome: 'José', idade: 18, email: 'jose@gmail.com', fone: '(47)9090-6070' }
+        ]
+
+        function ListarEmTabela() {
+
+            for (const key of listaContatos) {
+                show(key)
+
+            }
+        }
+
+        function show(contato) {
+
+            const linha = <tr>
+        }
+
+    </script>
+</body>
+
+</html>
